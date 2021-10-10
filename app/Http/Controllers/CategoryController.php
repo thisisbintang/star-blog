@@ -16,7 +16,7 @@ class CategoryController extends Controller
     {
         return view('category.index', [
             'title' => 'Category',
-            'categories' => Category::all()
+            'categories' => Category::with('posts.author')->get()
         ]);
     }
 
@@ -51,7 +51,8 @@ class CategoryController extends Controller
     {
         return view('category.show', [
             'title' => 'Detail Kategori',
-            'category' => $category
+            'category' => $category,
+            'posts' => $category->posts->load('author')
         ]);
     }
 

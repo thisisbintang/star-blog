@@ -28,7 +28,7 @@ Route::resource('posts', PostController::class)->scoped([
 ]);
 
 Route::resource('authors', AuthorController::class)->scoped([
-    'author' => 'slug'
+    'author' => 'username'
 ]);
 
 Route::resource('categories', CategoryController::class)->scoped([

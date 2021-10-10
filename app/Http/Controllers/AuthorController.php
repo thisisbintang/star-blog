@@ -16,7 +16,7 @@ class AuthorController extends Controller
     {
         return view('author.index', [
             'title' => 'Author',
-            'authors' => Author::all()
+            'authors' => Author::with('posts.category')->get()
         ]);
     }
 
@@ -51,7 +51,8 @@ class AuthorController extends Controller
     {
         return view('author.show', [
             'title' => 'Detail Penulis',
-            'author' => $author
+            'author' => $author,
+            'posts' => $author->posts->load('category')
         ]);
     }
 

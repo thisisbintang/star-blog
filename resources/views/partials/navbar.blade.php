@@ -15,13 +15,13 @@
                     <a class="nav-link {{ Request::routeIs('about') ? 'active' : '' }}" href="/about">Tentang</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::routeIs('posts.*') ? 'active' : '' }}" href="/posts">Post</a>
+                    <a class="nav-link {{ Request::routeIs('posts.index') ? 'active' : '' }}" href="/posts">Post</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::routeIs('authors.*') ? 'active' : '' }}" href="/authors">Penulis</a>
+                    <a class="nav-link {{ Request::routeIs('authors.index') ? 'active' : '' }}" href="/authors">Penulis</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::routeIs('categories.*') ? 'active' : '' }}"
+                    <a class="nav-link {{ Request::routeIs('categories.index') ? 'active' : '' }}"
                         href="/categories">Kategori</a>
                 </li>
             </ul>

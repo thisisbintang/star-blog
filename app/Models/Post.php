@@ -10,8 +10,9 @@ class Post extends Model
     use HasFactory;
 
     // protected $fillable = ['title', 'body', 'excerpt', 'slug'];
-       protected $guarded = ['id'];
-
+    protected $guarded = ['id'];
+    // protected $with = ['category', 'author'];
+    
     public function author()
     {
         return $this->belongsTo(Author::class);
